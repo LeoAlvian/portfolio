@@ -4,7 +4,7 @@
         <nav>
             <ul class="sf">
                 <li><a href=""><div class="minus"></div><div class="plus-rotate"></div> <span class="fancy-nav">About</span></a></li>
-                <li><a href=""><div class="minus"></div><div class="plus-rotate"></div> <span class="fancy-nav">Project</span></a></li>
+                <li><a href=""><div class="minus"></div><div class="plus-rotate"></div> <span class="fancy-nav">Projects</span></a></li>
                 <li><a href=""><div class="minus"></div><div class="plus-rotate"></div> <span class="fancy-nav">Contact</span></a></li>
                 <li><a href=""><div class="minus"></div><div class="plus-rotate"></div> <span class="fancy-nav">Blog</span></a></li>
             </ul>

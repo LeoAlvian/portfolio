@@ -29,9 +29,11 @@
         right here
       </div>
     </div>
+
+
     <div class="about">
-      <div class="about-item left"></div>
-      <div class="about-item center">
+      <div class="block-item left"></div>
+      <div class="block-item center about-center">
         <div class="about-content">
           <div class="about-title">
             <div class="num sf">01.</div>
@@ -49,19 +51,19 @@
                   <div class="triangle-right">
                     <div class="inner-triangle"></div>
                   </div>
-                  <span class="text-list">Hey</span>
+                  <span class="text-list">Python</span>
                 </div>
                 <div class="list-tech">
                   <div class="triangle-right">
                     <div class="inner-triangle"></div>
                   </div>
-                  <span class="text-list">You</span>
+                  <span class="text-list">JavaScript (ES6+)</span>
                 </div>
                 <div class="list-tech">
                   <div class="triangle-right">
                     <div class="inner-triangle"></div>
                   </div>
-                  <span class="text-list">What</span>
+                  <span class="text-list">Flutter</span>
                 </div>
               </div>
               <div class="tech-list-detail">
@@ -69,13 +71,19 @@
                   <div class="triangle-right">
                     <div class="inner-triangle"></div>
                   </div>
-                  <span class="text-list">Is</span>
+                  <span class="text-list">Vue</span>
                 </div>
                 <div class="list-tech">
                   <div class="triangle-right">
                     <div class="inner-triangle"></div>
                   </div>
-                  <span class="text-list">Up</span>
+                  <span class="text-list">Dart</span>
+                </div>
+                <div class="list-tech">
+                  <div class="triangle-right">
+                    <div class="inner-triangle"></div>
+                  </div>
+                  <span class="text-list">Node.js</span>
                 </div>
               </div>
             </div>
@@ -83,7 +91,42 @@
         </div>
         <div class="about-pic">Hey</div>
       </div>
-      <div class="about-item right"></div>
+      <div class="block-item right"></div>
+    </div>
+
+    <div class="project">
+      <div class="block-item left">Your</div>
+      <div class="block-item center">
+        <div class="project-title">
+          <div class="num sf">02.</div>
+          <div class="subtitle opb">My Projects</div>
+          <div class="line-title-project"></div>
+        </div>
+        <div class="global-card">
+          <div class="img-card">
+            <img src="img/analysis.jpg" alt="">
+          </div>
+          <div class="detail-project">
+            <div class="feature sf">Featured Project</div> 
+            <div class="opb project-title">The Corner Cafe App</div>
+            <div class="detail-card">
+              <p class="content-project content">Lorem ipsum dolor sit amet, consectetur adipisicing. fugiat repellendus, amet eveniet sunt necessitatibus beatae. Odit praesentium temporibus tempora!</p>
+            </div>
+            <div class="project-tech">
+              <div class="content list-project-tech sf">Vue</div>
+              <div class="content list-project-tech sf">Vuetify</div>
+              <div class="content list-project-tech sf">Firebase</div>
+              <div class="content list-project-tech sf">Express</div>
+              <div class="content list-project-tech sf">Heroku</div>
+            </div>
+            <div class="icon-project">
+              <a class="icon-link" href=""><fa icon="github" type="fab" class="icon"></fa></a>
+              <a class="icon-link" href=""><fa icon="meetup" type="fab" class="icon"></fa></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="block-item right"></div>
     </div>
   </div>
 </template>
@@ -321,7 +364,7 @@ p {
   grid-template-rows: 1fr;
 }
 
-.about-item {
+.block-item {
   // background-color: green;
 
   &.left {
@@ -330,9 +373,11 @@ p {
 
   &.center {
       grid-column: span 8;
-      display: grid;
-      grid-template-columns: repeat(12, 1fr);
-      grid-template-rows: 1fr;
+      &.about-center{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 1fr;
+      }
       // background-color: yellow;
   }
 
@@ -360,10 +405,8 @@ p {
 }
 
 .line-title {
-  // height: 1px;
-  // background-color: #918DB4 ;
-  border-top: 1px solid #918DB4;
-  width: 250px;
+  border-top: 1px solid hsla(246, 21%, 63%, 0.4);
+  width: 55%;
 }
 
 .about-content {
@@ -382,7 +425,7 @@ p {
 }
  
 .tech-list-detail {
-  width: 30%;
+  width: 45%;
 }
 
 .list-tech{
@@ -390,10 +433,20 @@ p {
   margin: 1rem 0;
 }
 
+.content {
+  color: #b0adcc;
+  font-size: .8rem;
+}
+
+.content p {
+  font-size: .9rem;
+  // word-spacing: 1px;
+}
+
 
 .triangle-right {
   position: relative;
-  margin: 6px 18px 0 0;
+  margin: 7px 18px 0 0;
   width: 0; height: 0; 
   border-top: 3px solid transparent;
   border-bottom: 3px solid transparent;
@@ -411,4 +464,81 @@ p {
   border-left: 3px solid #121212;;
 }
 
+//PROJECT
+.project {
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr;
+}
+
+.project-title {
+  display: flex;
+  align-items: center;
+  // width: 60%;
+}
+
+.line-title-project {
+  border-top: 1px solid hsla(246, 21%, 63%, 0.4);
+  width: 35%;
+}
+
+.global-card {
+  margin: 2.6rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.img-card {
+  width: 20rem;
+}
+
+.img-card img {
+  width: 30rem;
+}
+
+.detail-project {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.feature {
+  font-size: .9rem;
+}
+
+.project-title {
+  color: #E6FFF6;
+  font-size: 1.55rem;
+}
+
+.detail-card {
+  width: 30rem;
+  background-color: #202020;
+  padding: .9rem 2rem;
+  margin: 1.5rem 0;
+  border-radius: 4px;
+}
+
+.content-project {
+  text-align: right;
+  font-size: .9rem;
+}
+
+.project-tech {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin-bottom: 1.3rem;
+}
+
+.list-project-tech {
+  font-size: .8rem;
+}
+
+.icon-project {
+  width: 15%;
+  display: flex;
+  justify-content: space-between;
+}
 </style>
