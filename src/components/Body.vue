@@ -82,7 +82,7 @@
     </div>
 
     <div class="project">
-      <div class="block-item left">Your</div>
+      <div class="block-item left"></div>
       <div class="block-item center">
         <div class="project-title">
           <div class="num sf">02.</div>
@@ -112,6 +112,30 @@
             </div>
           </div>
         </div>
+
+        <div class="global-card1">
+          <div class="img-card1">
+            <img src="img/analysis.jpg" alt="">
+          </div>
+          <div class="detail-project1">
+            <div class="detail-card1">
+              <div class="feature sf">Featured Project</div> 
+              <div class="opb project-title">The Corner Cafe App</div>
+              <p class="content-project1 content">Lorem ipsum dolor sit amet, consectetur adipisicing. fugiat repellendus, amet eveniet sunt necessitatibus beatae. <a href="" class="a-hover"><span class="link-text">Odit</span></a> praesentium temporibus tempora!</p>
+            </div>
+            <div class="project-tech1">
+              <div class="content list-project-tech sf">Vue</div>
+              <div class="content list-project-tech sf">Vuetify</div>
+              <div class="content list-project-tech sf">Firebase</div>
+              <div class="content list-project-tech sf">Express</div>
+              <div class="content list-project-tech sf">Heroku</div>
+            </div>
+            <div class="icon-project1">
+              <a class="icon-link" href=""><unicon name="github-alt" width="21px" height="21px" fill="#918DB4" hover-fill="#3DFFB8"/></a>
+              <a class="icon-link" href=""><unicon name="external-link-alt" width="21px" height="21px" fill="#918DB4" hover-fill="#3DFFB8"/></a>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="block-item right"></div>
     </div>
@@ -134,6 +158,11 @@ export default {
 <style scoped lang="scss">
 
 $base-color: #3DFFB8;
+$soft-grey: #918DB4;
+$soft-white: #E6FFF6;
+$line-color: hsla(246, 21%, 63%, 0.4);
+
+$n-text-size: .95rem;
 
 .sf {
   font-family: sf;
@@ -208,7 +237,7 @@ a {
 
 .hero-item {
   // background: brown;
-  color: #3DFFB8;
+  color: $base-color;
   // display: flex;
   // justify-content: center;
   // align-items: center;
@@ -254,7 +283,7 @@ p {
   margin: 0;
   margin-left: -5px;
   font-size: 4rem;
-  color: #E6FFF6;
+  color: $soft-white;
   letter-spacing: 1px;
 }
 
@@ -262,7 +291,7 @@ p {
   margin: 0;
   margin-left: -5px;
   font-size: 3.16rem;
-  color: #918DB4;
+  color: $soft-grey;
   letter-spacing: 1px;
 }
 
@@ -270,8 +299,8 @@ p {
   margin-top: 20px;
   margin-bottom: 40px;
   width: 450px;
-  color: #918DB4;
-  font-size: .9rem;
+  color: $soft-grey;
+  font-size: $n-text-size;
   line-height: 150%;
   // letter-spacing: .1px;
 }
@@ -326,7 +355,7 @@ p {
 }
 
 .icon-link {
-  color: #918DB4;
+  color: $soft-grey;
   margin:0;
   height: 22px;
 
@@ -348,7 +377,7 @@ p {
 }
 
 .vl {
-  border-left: 1px solid #918DB4;
+  border-left: 1px solid $soft-grey;
   height: 90px;
   left: 50%;
   bottom: 0;
@@ -415,18 +444,18 @@ p {
 
 .subtitle {
   margin-right: 20px;
-  color: #E6FFF6;
+  color: $soft-white;
   font-size: 1.7rem;
 }
 
 .num {
   margin-right: 9px;
-  color: #3DFFB8;
+  color: $base-color;
   font-size: 1.3rem;
 }
 
 .line-title {
-  border-top: 1px solid hsla(246, 21%, 63%, 0.4);
+  border-top: 1px solid $line-color;
   width: 55%;
 }
 
@@ -460,35 +489,15 @@ p {
 }
 
 .content {
-  color: #b0adcc;
-  font-size: .8rem;
+  color: $soft-grey;
+  font-size: .85rem;
 }
 
 .content p {
-  font-size: .9rem;
+  font-size: $n-text-size;
   // word-spacing: 1px;
 }
 
-
-.triangle-right {
-  position: relative;
-  margin: 7px 18px 0 0;
-  width: 0; height: 0; 
-  border-top: 3px solid transparent;
-  border-bottom: 3px solid transparent;
-  
-  border-left: 6px solid $base-color;
-}
-
-.inner-triangle {
-  position: absolute;
-  top: -2px; left: -5px;
-  width: 0;
-  height: 0;
-  border-top: 2px solid transparent;
-  border-bottom: 2px solid transparent;
-  border-left: 3px solid #121212;
-}
 
 //PROJECT
 .project {
@@ -505,7 +514,7 @@ p {
 }
 
 .line-title-project {
-  border-top: 1px solid hsla(246, 21%, 63%, 0.4);
+  border-top: 1px solid $line-color;
   width: 35%;
 }
 
@@ -534,7 +543,7 @@ p {
 }
 
 .project-title {
-  color: #E6FFF6;
+  color: $soft-white;
   font-size: 1.55rem;
 }
 
@@ -567,4 +576,52 @@ p {
   display: flex;
   justify-content: space-between;
 }
+
+
+.global-card1 {
+  margin: 2.6rem 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.img-card1 img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.detail-project1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.detail-card1 {
+  width: 50rem;
+  background-color: #202020;
+  padding: .9rem 2rem;
+  margin: -1.5rem 0 1.5rem 0;
+  border-radius: 4px;
+}
+
+.content-project1 {
+  text-align: left;
+  font-size: .9rem;
+}
+
+
+.project-tech1 {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+  margin-bottom: 1.5rem;
+}
+
+.icon-project1 {
+  width: 7%;
+  display: flex;
+  justify-content: space-between;
+}
+
+
 </style>
