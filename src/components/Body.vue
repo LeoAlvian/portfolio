@@ -115,6 +115,7 @@
 
         <div class="global-card1">
           <div class="img-card1">
+            <div class="img-cover"></div>
             <img src="img/analysis.jpg" alt="">
           </div>
           <div class="detail-project1">
@@ -585,10 +586,40 @@ p {
   width: 100%;
 }
 
+.img-card1 {
+  position: relative;
+}
+
+.img-cover {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; 
+  height: 98%;
+  background-color: hsla(0, 0%, 13%, 0.4);
+  z-index: 10;
+
+  transition: all 150ms ease-in;
+}
+
 .img-card1 img {
   width: 100%;
   border-radius: 4px;
+  z-index: 1;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+
+  transition: all 150ms ease-in;
 }
+
+.img-card1:hover img {
+  -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
+}
+
+.img-card1:hover .img-cover{
+  background-color: transparent;
+}
+
 
 .detail-project1 {
   display: flex;
@@ -602,6 +633,7 @@ p {
   padding: .9rem 2rem;
   margin: -1.5rem 0 1.5rem 0;
   border-radius: 4px;
+  z-index: 100;
 }
 
 .content-project1 {
