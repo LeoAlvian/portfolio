@@ -3,10 +3,9 @@
     <div class="main-content">
       <div class="left-fixed">
         <div class="social-items">
-          <a class="icon-link" href=""><fa icon="github" type="fab" class="icon"></fa></a>
-          <a class="icon-link" href=""><fa icon="codepen" type="fab" class="icon"></fa></a>
-          <a class="icon-link" href=""><fa icon="linkedin-in" type="fab" class="icon"></fa></a>
-          <a class="icon-link" href=""><fa icon="instagram" type="fab" class="icon"></fa></a>
+          <a class="icon-link" href=""><unicon name="github-alt" width="21px" height="21px" fill="#918DB4" hover-fill="#3DFFB8"/></a>
+          <a class="icon-link" href=""><unicon name="linkedin-alt" width="21px" height="21px" fill="#918DB4" hover-fill="#3DFFB8"/></a>
+          <a class="icon-link" href=""><unicon name="instagram" width="21px" height="21px" fill="#918DB4" hover-fill="#3DFFB8"/></a>
           <div class="vl"></div>
         </div>
       </div>
@@ -19,7 +18,7 @@
               <p class="name sf">my name is</p>
               <h1 class="name1 ">Leo Alvian.</h1>
               <h2 class="job ">I'm a software developer.</h2>
-              <p class="detail ">I'm a software engineer based in Boston, MA specializing in building (and occasionally designing) exceptional websites, applications, and everything in between.</p>
+              <div class="detail ">I'm a software engineer based in Boston, MA specializing in building (and occasionally designing) exceptional websites, applications, and everything in between. <a href="" class="a-hover"><span class="link-text">Company</span></a></div>
               <button class="button-right sf one">Get In Touch</button>
             </div>
           </div>
@@ -43,46 +42,34 @@
           <div class="content">
             <p>Hello! I'm Brittany, a software engineer based in Boston, MA.</p>
             <p>I enjoy creating things that live on the internet, whether that be websites, applications, or anything in between. My goal is to always build products that provide pixel-perfect, performant experiences.</p>
-            <p>Shortly after graduating from Northeastern University, I joined the engineering team at Upstatement where I work on a wide variety of interesting and meaningful projects on a daily basis.</p>
+            <p>Shortly after graduating from Northeastern University, I joined the engineering team at Upstatement where I work on a wide variety of interesting and meaningful <a href="" class="a-hover"><span class="link-text">projects</span></a> on a daily basis.</p>
             <p>Here are a few technologies I've been working with recently: </p>
             <div class="tech-list">
               <div class="tech-list-detail">
                 <div class="list-tech">
-                  <div class="triangle-right">
-                    <div class="inner-triangle"></div>
-                  </div>
+                  <div class="uni-position"><unicon name="angle-double-right" fill="#3DFFB8"/></div>
                   <span class="text-list">Python</span>
                 </div>
                 <div class="list-tech">
-                  <div class="triangle-right">
-                    <div class="inner-triangle"></div>
-                  </div>
+                  <div class="uni-position"><unicon name="angle-double-right" fill="#3DFFB8"/></div>
                   <span class="text-list">JavaScript (ES6+)</span>
                 </div>
                 <div class="list-tech">
-                  <div class="triangle-right">
-                    <div class="inner-triangle"></div>
-                  </div>
+                  <div class="uni-position"><unicon name="angle-double-right" fill="#3DFFB8"/></div>
                   <span class="text-list">Flutter</span>
                 </div>
               </div>
               <div class="tech-list-detail">
                 <div class="list-tech">
-                  <div class="triangle-right">
-                    <div class="inner-triangle"></div>
-                  </div>
+                  <div class="uni-position"><unicon name="angle-double-right" fill="#3DFFB8"/></div>
                   <span class="text-list">Vue</span>
                 </div>
                 <div class="list-tech">
-                  <div class="triangle-right">
-                    <div class="inner-triangle"></div>
-                  </div>
+                  <div class="uni-position"><unicon name="angle-double-right" fill="#3DFFB8"/></div>
                   <span class="text-list">Dart</span>
                 </div>
                 <div class="list-tech">
-                  <div class="triangle-right">
-                    <div class="inner-triangle"></div>
-                  </div>
+                  <div class="uni-position"><unicon name="angle-double-right" fill="#3DFFB8"/></div>
                   <span class="text-list">Node.js</span>
                 </div>
               </div>
@@ -110,7 +97,7 @@
             <div class="feature sf">Featured Project</div> 
             <div class="opb project-title">The Corner Cafe App</div>
             <div class="detail-card">
-              <p class="content-project content">Lorem ipsum dolor sit amet, consectetur adipisicing. fugiat repellendus, amet eveniet sunt necessitatibus beatae. Odit praesentium temporibus tempora!</p>
+              <p class="content-project content">Lorem ipsum dolor sit amet, consectetur adipisicing. fugiat repellendus, amet eveniet sunt necessitatibus beatae. <a href="" class="a-hover"><span class="link-text">Odit</span></a> praesentium temporibus tempora!</p>
             </div>
             <div class="project-tech">
               <div class="content list-project-tech sf">Vue</div>
@@ -120,8 +107,8 @@
               <div class="content list-project-tech sf">Heroku</div>
             </div>
             <div class="icon-project">
-              <a class="icon-link" href=""><fa icon="github" type="fab" class="icon"></fa></a>
-              <a class="icon-link" href=""><fa icon="meetup" type="fab" class="icon"></fa></a>
+              <a class="icon-link" href=""><unicon name="github-alt" width="21px" height="21px" fill="#918DB4" hover-fill="#3DFFB8"/></a>
+              <a class="icon-link" href=""><unicon name="external-link-alt" width="21px" height="21px" fill="#918DB4" hover-fill="#3DFFB8"/></a>
             </div>
           </div>
         </div>
@@ -183,6 +170,33 @@ $base-color: #3DFFB8;
 .main-content {
     padding: 0;
     height: 85%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.link-text {
+  position: relative;
+  color: $base-color;
+}
+
+.link-text::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 1px;
+  width: 100%;
+  height: 1px;
+  background-color: $base-color;
+
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 150ms ease-in;
+}
+
+.a-hover:hover .link-text::after {
+  transform: scaleX(1);
 }
 
 .hero {
@@ -313,8 +327,15 @@ p {
 
 .icon-link {
   color: #918DB4;
+  margin:0;
+  height: 22px;
 
   transition: all  150ms ease-in-out;
+}
+
+.icon-link .unicon {
+  height: 23px;
+  width: 23px;
 }
 
 .icon-link:hover {
@@ -418,6 +439,16 @@ p {
   // background-color: blue;
 }
 
+.list-tech{
+  display: flex;
+  margin: 1rem 0;
+}
+
+.uni-position {
+  margin: -3px 8px 0 -6px;
+  // color: #fbff00;
+  // color: #129b69;
+}
 
 .tech-list {
   display: flex;
@@ -426,11 +457,6 @@ p {
  
 .tech-list-detail {
   width: 45%;
-}
-
-.list-tech{
-  display: flex;
-  margin: 1rem 0;
 }
 
 .content {
@@ -461,7 +487,7 @@ p {
   height: 0;
   border-top: 2px solid transparent;
   border-bottom: 2px solid transparent;
-  border-left: 3px solid #121212;;
+  border-left: 3px solid #121212;
 }
 
 //PROJECT
@@ -529,7 +555,7 @@ p {
   display: flex;
   justify-content: space-between;
   width: 80%;
-  margin-bottom: 1.3rem;
+  margin-bottom: 1.5rem;
 }
 
 .list-project-tech {
