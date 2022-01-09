@@ -17,8 +17,8 @@
               <p class="hello sf">Hello, World!</p>
               <p class="name sf">my name is</p>
               <h1 class="name1 ">Leo Alvian.</h1>
-              <h2 class="job ">I'm a software developer.</h2>
-              <div class="detail ">I'm a software engineer based in Boston, MA specializing in building (and occasionally designing) exceptional websites, applications, and everything in between. <a href="" class="a-hover"><span class="link-text">Company</span></a></div>
+              <!-- <h2 class="job ">I'm a software developer.</h2> -->
+              <div class="detail ">I'm a full stack software developer based in Bandung, Indonesia specializing in building and occasionally designing exceptional websites or applications. <a href="" class="a-hover"><span class="link-text">Company</span></a></div>
               <button class="button-right sf one">Get In Touch</button>
             </div>
           </div>
@@ -40,7 +40,7 @@
             <div class="line-title"></div>
           </div>
           <div class="content">
-            <p>Hello! I'm Brittany, a software engineer based in Boston, MA.</p>
+            <p>Hello! I'm Leo Alvian, a software developer based in Bandung, Indonesia.</p>
             <p>I enjoy creating things that live on the internet, whether that be websites, applications, or anything in between. My goal is to always build products that provide pixel-perfect, performant experiences.</p>
             <p>Shortly after graduating from Northeastern University, I joined the engineering team at Upstatement where I work on a wide variety of interesting and meaningful <a href="" class="a-hover"><span class="link-text">projects</span></a> on a daily basis.</p>
             <p>Here are a few technologies I've been working with recently: </p>
