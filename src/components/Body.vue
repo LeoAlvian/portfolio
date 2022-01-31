@@ -120,23 +120,42 @@
           </div>
           <div class="detail-project1">
             <div class="detail-card1">
-              <div class="feature sf">Featured Project</div> 
+              <div class="detail-heading">
+                <div class="feature sf">Featured Project</div>
+                <div class="icon-project1">
+                  <a class="icon-link" href=""><unicon name="github-alt" width="21px" height="21px" fill="#918DB4" hover-fill="#3DFFB8"/></a>
+                  <a class="icon-link" href=""><unicon name="external-link-alt" width="21px" height="21px" fill="#918DB4" hover-fill="#3DFFB8"/></a>
+                </div>
+              </div>
               <div class="opb project-title">The Corner Cafe App</div>
               <p class="content-project1 content">Lorem ipsum dolor sit amet, consectetur adipisicing. fugiat repellendus, amet eveniet sunt necessitatibus beatae. <a href="" class="a-hover"><span class="link-text">Odit</span></a> praesentium temporibus tempora!</p>
-            </div>
-            <div class="project-tech1">
-              <div class="content list-project-tech sf">Vue</div>
-              <div class="content list-project-tech sf">Vuetify</div>
-              <div class="content list-project-tech sf">Firebase</div>
-              <div class="content list-project-tech sf">Express</div>
-              <div class="content list-project-tech sf">Heroku</div>
-            </div>
-            <div class="icon-project1">
-              <a class="icon-link" href=""><unicon name="github-alt" width="21px" height="21px" fill="#918DB4" hover-fill="#3DFFB8"/></a>
-              <a class="icon-link" href=""><unicon name="external-link-alt" width="21px" height="21px" fill="#918DB4" hover-fill="#3DFFB8"/></a>
+              <div class="project-tech1">
+                <div class="content list-project-tech sf">Vue</div>
+                <div class="content list-project-tech sf">Vuetify</div>
+                <div class="content list-project-tech sf">Firebase</div>
+                <div class="content list-project-tech sf">Express</div>
+                <div class="content list-project-tech sf">Heroku</div>
+              </div>
             </div>
           </div>
         </div>
+
+        <div class="more-project-card">
+          <div class="bg-card">
+            <div class="display-info-card">
+
+            </div>
+          </div>
+          <div class="cover-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                Hello
+              </div>
+              <div class="flip-card-back"></div>
+            </div>
+          </div>
+        </div>
+
       </div>
       <div class="block-item right"></div>
     </div>
@@ -636,6 +655,11 @@ p {
   z-index: 100;
 }
 
+.detail-heading {
+  display: flex;
+  justify-content: space-between;
+}
+
 .content-project1 {
   text-align: left;
   font-size: .9rem;
@@ -650,9 +674,71 @@ p {
 }
 
 .icon-project1 {
-  width: 7%;
+  width: 9%;
   display: flex;
   justify-content: space-between;
+}
+
+
+// Card more project
+.more-project-card {
+  position: relative;
+  height: 300px;
+  width: 260px;
+  background-color: burlywood;
+}
+
+.bg-card {
+  position: absolute;
+  bottom: 0; left: 0;
+  height: 80%;
+  width: 100%;
+  background-color: rgb(48, 109, 48);
+}
+
+.cover-card {
+  position: absolute;
+  top: 0; left: 0;
+  height: 300px;
+  width: 260px;
+  background-color: transparent;
+
+  perspective: 1000px;
+  
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-origin: top;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.cover-card:hover .flip-card-inner {
+  transform: rotateX(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: rgb(48, 109, 48);
+  color: black;
+}
+
+.flip-card-back {
+  background-color: burlywood;
+  color: white;
+  transform: rotateX(180deg);
 }
 
 
