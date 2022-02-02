@@ -140,7 +140,7 @@
           </div>
         </div>
 
-        <div class="more-project-card">
+        <!-- <div class="more-project-card">
           <div class="bg-card">
             <div class="display-info-card">
               Hello
@@ -153,6 +153,19 @@
               </div>
               <div class="flip-card-back">
                 Hey
+              </div>
+            </div>
+          </div>
+        </div> -->
+        
+        <div class="outer outlined-card">
+          <span class="card-title sf">project</span>
+          <div class="inner outlined-card">
+            <div class="content-outlined">
+              <p class="card-heading">Cryptocurrencies Apps</p>
+              <div class="content-icon">
+                <a class="icon-link" href=""><unicon name="github-alt" width="21px" height="21px" fill="#918DB4" hover-fill="#3DFFB8"/></a>
+                <a class="icon-link" href=""><unicon name="external-link-alt" width="21px" height="21px" fill="#918DB4" hover-fill="#3DFFB8"/></a>
               </div>
             </div>
           </div>
@@ -184,6 +197,7 @@ $base-color-card: #0a8a5b;
 $soft-grey: #918DB4;
 $soft-white: #E6FFF6;
 $line-color: hsla(246, 21%, 63%, 0.4);
+$dark-bg-color: #121212;
 
 $n-text-size: .95rem;
 
@@ -746,6 +760,49 @@ p {
   color: black;
   transform: rotateX(180deg);
   clip-path: polygon(0% 0%, 85% 0%, 100% 15%, 100% 100%, 0% 100%);
+}
+
+.outlined-card {
+  height: 190px;
+  width: 260px;
+}
+
+
+.outer { 
+  background-color: $base-color;
+  color: $dark-bg-color;
+  margin: 2rem 0;
+  clip-path: polygon(0% 0%, 45% 0%, 55% 10%, 100% 10%, 100% 100%, 0% 100%);
+}
+
+.inner {
+  background-color: $dark-bg-color;
+  clip-path: polygon(1% -11%, 44% -11%, 54% -11%, 99% -11%, 99% 85%, 1% 85%);
+}
+
+.content-outlined {
+  width: 100%;
+  height: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: $soft-white;
+}
+
+.card-title {
+  margin-left: 5px;
+  font-weight: 700;
+}
+
+.card-heading {
+  font-size: 1.15rem;
+}
+
+.content-icon {
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
 }
 
 
