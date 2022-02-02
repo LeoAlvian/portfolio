@@ -143,7 +143,7 @@
         <div class="more-project-card">
           <div class="bg-card">
             <div class="display-info-card">
-
+              Hello
             </div>
           </div>
           <div class="cover-card">
@@ -151,7 +151,9 @@
               <div class="flip-card-front">
                 Hello
               </div>
-              <div class="flip-card-back"></div>
+              <div class="flip-card-back">
+                Hey
+              </div>
             </div>
           </div>
         </div>
@@ -178,6 +180,7 @@ export default {
 <style scoped lang="scss">
 
 $base-color: #3DFFB8;
+$base-color-card: #0a8a5b;
 $soft-grey: #918DB4;
 $soft-white: #E6FFF6;
 $line-color: hsla(246, 21%, 63%, 0.4);
@@ -693,18 +696,19 @@ p {
   bottom: 0; left: 0;
   height: 80%;
   width: 100%;
-  background-color: rgb(48, 109, 48);
+  background-color: $base-color-card;
 }
 
 .cover-card {
   position: absolute;
   top: 0; left: 0;
-  height: 300px;
-  width: 260px;
+  height: 85%;
+  width: 100%;
   background-color: transparent;
 
   perspective: 1000px;
-  
+  z-index: 1000;
+  filter: drop-shadow(-1px 6px 3px rgba(0,0,0,0.3));
 }
 
 .flip-card-inner {
@@ -712,10 +716,11 @@ p {
   width: 100%;
   height: 100%;
   text-align: center;
-  transition: transform 0.6s;
+  transition: transform 350ms;
   transform-origin: top;
   transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  // box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  // filter: drop-shadow(-1px 6px 3px rgba(0,0,0,0.4));
 }
 
 .cover-card:hover .flip-card-inner {
@@ -731,14 +736,16 @@ p {
 }
 
 .flip-card-front {
-  background-color: rgb(48, 109, 48);
-  color: black;
+  background-color: $base-color-card;
+  color: burlywood;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 85% 100%, 0% 100%);
 }
 
 .flip-card-back {
   background-color: burlywood;
-  color: white;
+  color: black;
   transform: rotateX(180deg);
+  clip-path: polygon(0% 0%, 85% 0%, 100% 15%, 100% 100%, 0% 100%);
 }
 
 
