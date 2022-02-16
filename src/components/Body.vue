@@ -89,7 +89,7 @@
           <div class="subtitle opb">My Projects</div>
           <div class="line-title-project"></div>
         </div>
-        <div class="global-card">
+        <!-- <div class="global-card">
           <div class="img-card">
             <img src="img/analysis.jpg" alt="">
           </div>
@@ -111,7 +111,7 @@
               <a class="icon-link" href=""><unicon name="external-link-alt" width="21px" height="21px" fill="#918DB4" hover-fill="#3DFFB8"/></a>
             </div>
           </div>
-        </div>
+        </div> -->
 
         <div class="global-card1">
           <div class="img-card1">
@@ -130,16 +130,18 @@
               <div class="opb project-title">The Corner Cafe App</div>
               <p class="content-project1 content">Lorem ipsum dolor sit amet, consectetur adipisicing. fugiat repellendus, amet eveniet sunt necessitatibus beatae. <a href="" class="a-hover"><span class="link-text">Odit</span></a> praesentium temporibus tempora!</p>
               <div class="project-tech1">
-                <div class="content list-project-tech sf">Vue</div>
-                <div class="content list-project-tech sf">Vuetify</div>
-                <div class="content list-project-tech sf">Firebase</div>
-                <div class="content list-project-tech sf">Express</div>
-                <div class="content list-project-tech sf">Heroku</div>
+                <div class="desc list-project-tech sf">Vue</div>
+                <div class="desc list-project-tech sf">Vuetify</div>
+                <div class="desc list-project-tech sf">Firebase</div>
+                <div class="desc list-project-tech sf">Express</div>
+                <div class="desc list-project-tech sf">Heroku</div>
               </div>
             </div>
           </div>
         </div>
 
+
+        <!-- card open with cover animation -->
         <!-- <div class="more-project-card">
           <div class="bg-card">
             <div class="display-info-card">
@@ -158,7 +160,9 @@
           </div>
         </div> -->
         
-        <div class="outer outlined-card">
+
+        <!-- project with folder card display  -->
+        <!-- <div class="outer outlined-card">
           <span class="card-title sf">project</span>
           <div class="inner outlined-card">
             <div class="content-outlined">
@@ -167,6 +171,76 @@
                 <a class="icon-link" href=""><unicon name="github-alt" width="21px" height="21px" fill="#918DB4" hover-fill="#3DFFB8"/></a>
                 <a class="icon-link" href=""><unicon name="external-link-alt" width="21px" height="21px" fill="#918DB4" hover-fill="#3DFFB8"/></a>
               </div>
+            </div>
+          </div>
+        </div> -->
+
+
+        <!-- Other Project  -->
+        <div class="subtitle opb">Other Projects</div>
+        <div class="other-projects">
+          <!-- one card  -->
+          <div class="project-card">
+            <div class="project-heading">
+              <unicon name="folder-open" width="45px" height="45px" fill="#3DFFB8"/>
+              <div class="content-icon">
+                <a class="icon-link" href=""><unicon name="github-alt" width="21px" height="21px" fill="#918DB4" hover-fill="#3DFFB8"/></a>
+                <a class="icon-link" href=""><unicon name="external-link-alt" width="21px" height="21px" fill="#918DB4" hover-fill="#3DFFB8"/></a>
+              </div>
+            </div>
+            <div class="project-desc">
+              <h1 class="opb project-title">Cryptocurrencies</h1>
+              <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam vero facere veritatis sed libero ipsa? fdsdfsdf sdfsdfsdf sdfsdfs sfsdf sdfs sdfadfd</p>
+            </div>
+            <div class="line-title-project-card"></div>
+            <div class="project-tech2">
+              <div class="content list-project-tech sf">Vue</div>
+                <div class="content list-project-tech sf">Vuetify</div>
+                <div class="content list-project-tech sf">Firebase</div>
+                <div class="content list-project-tech sf">Express</div>
+                <div class="content list-project-tech sf">Heroku</div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-heading">
+              <unicon name="folder-open" width="45px" height="45px" fill="#3DFFB8"/>
+              <div class="content-icon">
+                <a class="icon-link" href=""><unicon name="github-alt" width="21px" height="21px" fill="#918DB4" hover-fill="#3DFFB8"/></a>
+                <a class="icon-link" href=""><unicon name="external-link-alt" width="21px" height="21px" fill="#918DB4" hover-fill="#3DFFB8"/></a>
+              </div>
+            </div>
+            <div class="project-desc">
+              <h1 class="opb project-title">Cryptocurrencies</h1>
+              <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam vero facere veritatis sed libero ipsa?</p>
+            </div>
+            <div class="project-tech2">
+              <div class="content list-project-tech sf">Vue</div>
+                <div class="content list-project-tech sf">Vuetify</div>
+                <div class="content list-project-tech sf">Firebase</div>
+                <div class="content list-project-tech sf">Express</div>
+                <div class="content list-project-tech sf">Heroku</div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-heading">
+              <unicon name="folder-open" width="45px" height="45px" fill="#3DFFB8"/>
+              <div class="content-icon">
+                <a class="icon-link" href=""><unicon name="github-alt" width="21px" height="21px" fill="#918DB4" hover-fill="#3DFFB8"/></a>
+                <a class="icon-link" href=""><unicon name="external-link-alt" width="21px" height="21px" fill="#918DB4" hover-fill="#3DFFB8"/></a>
+              </div>
+            </div>
+            <div class="project-desc">
+              <h1 class="opb project-title">Cryptocurrencies</h1>
+              <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam vero facere veritatis sed libero ipsa?</p>
+            </div>
+            <div class="project-tech2">
+              <div class="content list-project-tech sf">Vue</div>
+                <div class="content list-project-tech sf">Vuetify</div>
+                <div class="content list-project-tech sf">Firebase</div>
+                <div class="content list-project-tech sf">Express</div>
+                <div class="content list-project-tech sf">Heroku</div>
             </div>
           </div>
         </div>
@@ -194,7 +268,7 @@ export default {
 
 $base-color: #3DFFB8;
 $base-color-card: #0a8a5b;
-$soft-grey: #918DB4;
+$soft-grey: #a09cc4;
 $soft-white: #E6FFF6;
 $line-color: hsla(246, 21%, 63%, 0.4);
 $dark-bg-color: #121212;
@@ -470,6 +544,7 @@ p {
 
   &.right {
       grid-column: span 2;
+      // background-color: yellow;
   }
 }
 
@@ -805,5 +880,39 @@ p {
   justify-content: space-around;
 }
 
+.other-projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  column-gap: 1rem;
+  row-gap: 1rem;
+}
+
+.project-card {
+  background-color: #202020;
+  width: 18rem;
+  height: 21rem;
+  border-radius: 5px;
+  padding: 1.5rem;
+}
+
+.project-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-tech2 {
+  
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+}
+
+.line-title-project-card {
+  border-top: 1px solid $line-color;
+  width: 100%;
+  margin: 1rem 0;
+}
 
 </style>

@@ -3,8 +3,8 @@ import App from './App.vue'
 
 // Icons 
 import Unicon from 'vue-unicons'
-import { uniInstagram, uniGithubAlt, uniLinkedinAlt, uniExternalLinkAlt, uniAngleRight, uniAngleDoubleRight, uniFacebookF, uniAt, uniEnvelope, uniAngleDoubleRightMonochrome, uniVuejsMonochrome } from 'vue-unicons/dist/icons'
-Unicon.add([uniInstagram, uniGithubAlt, uniLinkedinAlt, uniExternalLinkAlt, uniAngleRight, uniAngleDoubleRight, uniFacebookF, uniAt, uniEnvelope, uniAngleDoubleRightMonochrome, uniVuejsMonochrome])
+import { uniInstagram, uniGithubAlt, uniFolderOpen, uniLinkedinAlt, uniExternalLinkAlt, uniAngleRight, uniAngleDoubleRight, uniFacebookF, uniAt, uniEnvelope, uniAngleDoubleRightMonochrome, uniVuejsMonochrome } from 'vue-unicons/dist/icons'
+Unicon.add([uniInstagram, uniGithubAlt, uniFolderOpen, uniLinkedinAlt, uniExternalLinkAlt, uniAngleRight, uniAngleDoubleRight, uniFacebookF, uniAt, uniEnvelope, uniAngleDoubleRightMonochrome, uniVuejsMonochrome])
 
 import { FontAwesomeIcon } from "@/plugins/fontawesome";
 
