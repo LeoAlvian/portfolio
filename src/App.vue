@@ -68,6 +68,33 @@ export default {
   color:#3DFFB8;
 }
 
+::-webkit-scrollbar {
+  width: .6rem;               /* width of the entire scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #121212;
+  margin-block: .5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #121212;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 2px solid #3DFFB8;  /* creates padding around scroll thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  // background: linear-gradient(#E6FFF6, #121212);
+  background: linear-gradient(#121212, #E6FFF6);
+}
+
+@supports (scrollbar-color: red blue) {
+  * {
+    scrollbar-color: #3DFFB8 #121212;
+    scrollbar-width: thin;
+  }
+}
+
 body {
   margin: 0;
   padding: 0;

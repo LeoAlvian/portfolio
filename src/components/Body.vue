@@ -130,11 +130,11 @@
               <div class="opb project-title">The Corner Cafe App</div>
               <p class="content-project1 content">Lorem ipsum dolor sit amet, consectetur adipisicing. fugiat repellendus, amet eveniet sunt necessitatibus beatae. <a href="" class="a-hover"><span class="link-text">Odit</span></a> praesentium temporibus tempora!</p>
               <div class="project-tech1">
-                <div class="desc list-project-tech sf">Vue</div>
-                <div class="desc list-project-tech sf">Vuetify</div>
-                <div class="desc list-project-tech sf">Firebase</div>
-                <div class="desc list-project-tech sf">Express</div>
-                <div class="desc list-project-tech sf">Heroku</div>
+                <div class="content list-project-tech sf">Vue</div>
+                <div class="content list-project-tech sf">Vuetify</div>
+                <div class="content list-project-tech sf">Firebase</div>
+                <div class="content list-project-tech sf">Express</div>
+                <div class="content list-project-tech sf">Heroku</div>
               </div>
             </div>
           </div>
@@ -182,6 +182,7 @@
           <!-- one card  -->
           <div class="project-card">
             <div class="project-heading">
+              <!-- https://iconscout.com/unicons/explore/line  -->
               <unicon name="folder-open" width="45px" height="45px" fill="#3DFFB8"/>
               <div class="content-icon">
                 <a class="icon-link" href=""><unicon name="github-alt" width="21px" height="21px" fill="#918DB4" hover-fill="#3DFFB8"/></a>
@@ -245,6 +246,29 @@
           </div>
         </div>
 
+
+        <!-- Contact Form  -->
+        <form class="contact">
+          <div class="contact-animation">Hey</div>
+          <div class="contact-card">
+            <h1 class="subtitle opb">Get In Touch</h1>
+            <p>
+              <input class="contact-input sf" type="text" placeholder="Full name">
+            </p>
+            <p>
+              <input class="contact-input sf" type="text" placeholder="Email" v-model="email" @blur="validateEmail">
+            </p>
+            <p v-if="errors.email">Please enter a valid email</p>
+            <p>
+              <input class="contact-input sf" type="text" placeholder="Subject">
+            </p>
+            <p>
+              <textarea class="contact-textarea sf" name="" id="" cols="30" rows="10" placeholder="message"></textarea>
+            </p>
+            <button class="button-right sf one">Submit</button>
+          </div>
+        </form>
+
       </div>
       <div class="block-item right"></div>
     </div>
@@ -257,8 +281,25 @@ export default {
   },
   data() {
       return{
-        
+        email: '',
+        errors: {
+          email: false,
+        }
       }
+  },
+  methods: {
+    validateEmail() {
+      const isValid = this.isValidEmail(this.email)
+
+      console.log(isValid)
+      this.errors.email = !isValid
+
+    },
+    isValidEmail(email) {
+      // var re = /^(([^<>()\[\]\\.,;:\s@"]zz+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      var re = /^[a-zA-Z0-9.! #$%&'*+/=? ^_`{|}~-]+@[a-zA-Z0-9-]+(?:\. [a-zA-Z0-9-]+)*$/;
+      return re.test(email)
+    }
   }
 }
 </script>
@@ -913,6 +954,67 @@ p {
   border-top: 1px solid $line-color;
   width: 100%;
   margin: 1rem 0;
+}
+
+
+// Contact
+.contact {
+  display: flex;
+  justify-content: space-between;
+  margin: 8rem 0;
+}
+
+.contact-animation {
+  width: 45%;
+}
+
+.contact-card {
+  width: 45%;
+}
+
+.contact-input {
+  background: transparent;
+  border: none;
+  color: $soft-white;
+  border-bottom: 1px solid $soft-white;
+  width: 100%;
+  height: 2rem;
+  font-size: .94rem;
+  margin-top: .4rem;
+}
+
+.contact-input:focus {
+  border-bottom: 2px solid $base-color;
+  outline: none;
+}
+
+.contact-textarea {
+  background: transparent;
+  border: none;
+  color: $soft-white;
+  border-bottom: 1px solid $soft-white;
+  width: 100%;
+  height: 10rem;
+}
+
+.contact-textarea:focus {
+  border-bottom: 2px solid $base-color;
+  outline: none;
+}
+
+
+
+
+@media only screen and (min-width: 700px) {
+  .project-card {
+    width: 17rem;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .project-card {
+    width: 18rem;
+  }
 }
 
 </style>
