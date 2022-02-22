@@ -248,23 +248,26 @@
 
 
         <!-- Contact Form  -->
-        <form class="contact">
+        <form class="contact" @submit.prevent="submitForm">
           <div class="contact-animation">Hey</div>
           <div class="contact-card">
             <h1 class="subtitle opb">Get In Touch</h1>
             <p>
-              <input class="contact-input sf" type="text" placeholder="Full name">
+              <input class="contact-input sf" type="text" placeholder="Full name" v-model="fullname" @blur="validateFullName">
             </p>
+            <p v-if="errors.fullname.status">{{ errors.fullname.message }}</p>
             <p>
               <input class="contact-input sf" type="text" placeholder="Email" v-model="email" @blur="validateEmail">
             </p>
-            <p v-if="errors.email">Please enter a valid email</p>
+            <p v-if="errors.email.status">{{ errors.email.message }}</p>
             <p>
-              <input class="contact-input sf" type="text" placeholder="Subject">
+              <input class="contact-input sf" type="text" placeholder="Subject" v-model="subject" @blur="validateSubject">
             </p>
+            <p v-if="errors.subject.status">{{ errors.subject.message }}</p>
             <p>
-              <textarea class="contact-textarea sf" name="" id="" cols="30" rows="10" placeholder="message"></textarea>
+              <textarea class="contact-textarea sf" name="" id="" cols="30" rows="10" placeholder="message" v-model="message" @blur="validateMessage"></textarea>
             </p>
+            <p v-if="errors.message.status">{{ errors.message.message }}</p>
             <button class="button-right sf one">Submit</button>
           </div>
         </form>
@@ -276,29 +279,96 @@
 </template>
 
 <script>
+import useValidate from '@vuelidate/core'
+import { required, email } from '@vuelidate/validators'
+
 export default {
   components: {
   },
   data() {
       return{
+        v$: useValidate(),
+        fullname: '',
         email: '',
+        subject: '',
+        message: '',
         errors: {
-          email: false,
+          email: {
+            status: false,
+            message: '',
+          },
+          fullname: {
+            status: false,
+            message: '',
+          },
+          subject: {
+            status: false,
+            message: '',
+          },
+          message: {
+            status: false,
+            message: '',
+          },
         }
       }
   },
+  validations(){
+    return {
+      fullname: { required },
+      email: { required, email },
+      subject: { required },
+      message: { required },
+    }
+  },
   methods: {
     validateEmail() {
-      const isValid = this.isValidEmail(this.email)
+      // const isValid = this.isValidEmail(this.email)
+      // this.errors.email = !isValid
 
-      console.log(isValid)
-      this.errors.email = !isValid
-
+      this.v$.$validate()
+      this.errors.email.status = this.v$.email.$invalid
+      if(this.errors.email.status){
+        this.errors.email.message = this.v$.email.$errors[0].$message
+      }
     },
-    isValidEmail(email) {
-      // var re = /^(([^<>()\[\]\\.,;:\s@"]zz+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-      var re = /^[a-zA-Z0-9.! #$%&'*+/=? ^_`{|}~-]+@[a-zA-Z0-9-]+(?:\. [a-zA-Z0-9-]+)*$/;
-      return re.test(email)
+    // isValidEmail(email) {
+    //   // var re = /^(([^<>()\[\]\\.,;:\s@"]zz+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    //   var re = /^[a-zA-Z0-9.! #$%&'*+/=? ^_`{|}~-]+@[a-zA-Z0-9-]+(?:\. [a-zA-Z0-9-]+)*$/;
+    //   return re.test(email)
+    // }
+    validateFullName() {
+      this.v$.$validate()
+      this.errors.fullname.status = this.v$.fullname.$invalid
+      if(this.errors.fullname.status){
+        this.errors.fullname.message = this.v$.fullname.$errors[0].$message
+      }
+    },
+    validateSubject() {
+      this.v$.$validate()
+      this.errors.subject.status = this.v$.subject.$invalid
+      if(this.errors.subject.status){
+        this.errors.subject.message = this.v$.subject.$errors[0].$message
+      }
+    },
+    validateMessage() {
+      this.v$.$validate()
+      this.errors.message.status = this.v$.message.$invalid
+      if(this.errors.message.status){
+        this.errors.message.message = this.v$.message.$errors[0].$message
+      }
+      // console.log('fullname : ',this.errors.fullname.status)
+      // console.log('email : ',this.errors.email.status)
+      // console.log('subject : ',this.errors.subject.status)
+      // console.log('message : ',this?.errors?.message?.status)
+    },
+    submitForm(){
+      if(!this.errors.fullname.status && !this.errors.email.status && !this.errors.subject.status && !this.errors.message.status){
+        console.log('Submiting form')
+        this.fullname = ''
+        this.email = ''
+        this.subject = ''
+        this.message = ''
+      }
     }
   }
 }
