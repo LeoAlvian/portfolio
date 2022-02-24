@@ -177,13 +177,13 @@
 
 
         <!-- Other Project  -->
-        <div class="subtitle opb">Other Projects</div>
+        <div class="title-projects subtitle opb">Other Projects</div>
         <div class="other-projects">
           <!-- one card  -->
-          <div class="project-card">
-            <div class="project-heading">
+          <!-- <div class="project-card">
+            <div class="project-heading"> -->
               <!-- https://iconscout.com/unicons/explore/line  -->
-              <unicon name="folder-open" width="45px" height="45px" fill="#3DFFB8"/>
+              <!-- <unicon name="folder-open" width="45px" height="45px" fill="#3DFFB8"/>
               <div class="content-icon">
                 <a class="icon-link" href=""><unicon name="github-alt" width="21px" height="21px" fill="#918DB4" hover-fill="#3DFFB8"/></a>
                 <a class="icon-link" href=""><unicon name="external-link-alt" width="21px" height="21px" fill="#918DB4" hover-fill="#3DFFB8"/></a>
@@ -201,50 +201,34 @@
                 <div class="content list-project-tech sf">Express</div>
                 <div class="content list-project-tech sf">Heroku</div>
             </div>
-          </div>
+          </div> -->
 
-          <div class="project-card">
-            <div class="project-heading">
-              <unicon name="folder-open" width="45px" height="45px" fill="#3DFFB8"/>
+
+          <div class="image-card" v-for="index in 3" :key="index">
+            <div class="img-card1">
+              <div class="img-cover"></div>
+              <img class="project-img" :src="`/img/${ cardProject.image }`" alt="">
+            </div>
+            <div class="project-desc">
+              <h1 class="opb project-title">{{ cardProject.title }}</h1>
+            </div>
+            <div class="line-title-project-card"></div>
+            <div class="project-tech3">
+              <div v-for="(tech, index) in cardProject.tech" :key="index">
+                <div class="content list-project-tech sf">{{ tech }}</div>
+              </div>
+            </div>
+            <div class="project-footer">
               <div class="content-icon">
                 <a class="icon-link" href=""><unicon name="github-alt" width="21px" height="21px" fill="#918DB4" hover-fill="#3DFFB8"/></a>
                 <a class="icon-link" href=""><unicon name="external-link-alt" width="21px" height="21px" fill="#918DB4" hover-fill="#3DFFB8"/></a>
               </div>
             </div>
-            <div class="project-desc">
-              <h1 class="opb project-title">Cryptocurrencies</h1>
-              <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam vero facere veritatis sed libero ipsa?</p>
-            </div>
-            <div class="project-tech2">
-              <div class="content list-project-tech sf">Vue</div>
-                <div class="content list-project-tech sf">Vuetify</div>
-                <div class="content list-project-tech sf">Firebase</div>
-                <div class="content list-project-tech sf">Express</div>
-                <div class="content list-project-tech sf">Heroku</div>
-            </div>
           </div>
 
-          <div class="project-card">
-            <div class="project-heading">
-              <unicon name="folder-open" width="45px" height="45px" fill="#3DFFB8"/>
-              <div class="content-icon">
-                <a class="icon-link" href=""><unicon name="github-alt" width="21px" height="21px" fill="#918DB4" hover-fill="#3DFFB8"/></a>
-                <a class="icon-link" href=""><unicon name="external-link-alt" width="21px" height="21px" fill="#918DB4" hover-fill="#3DFFB8"/></a>
-              </div>
-            </div>
-            <div class="project-desc">
-              <h1 class="opb project-title">Cryptocurrencies</h1>
-              <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam vero facere veritatis sed libero ipsa?</p>
-            </div>
-            <div class="project-tech2">
-              <div class="content list-project-tech sf">Vue</div>
-                <div class="content list-project-tech sf">Vuetify</div>
-                <div class="content list-project-tech sf">Firebase</div>
-                <div class="content list-project-tech sf">Express</div>
-                <div class="content list-project-tech sf">Heroku</div>
-            </div>
-          </div>
         </div>
+
+
 
 
         <!-- Contact Form  -->
@@ -287,6 +271,14 @@ export default {
   },
   data() {
       return{
+        cardProject: {
+          image: 'home.jpg',
+          title: 'Cryptocurrencies',
+          desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque in sint rerum voluptatibus tempore facere, sed doloribus!',
+          tech: [
+            'Vue', 'Vuetify', 'Firebase', 'Express', 'Heroku'
+          ]
+        },
         v$: useValidate(),
         fullname: '',
         email: '',
@@ -383,6 +375,7 @@ $soft-grey: #a09cc4;
 $soft-white: #E6FFF6;
 $line-color: hsla(246, 21%, 63%, 0.4);
 $dark-bg-color: #121212;
+$dark-accent: #202020;
 
 $n-text-size: .95rem;
 
@@ -772,7 +765,7 @@ p {
 
 .detail-card {
   width: 30rem;
-  background-color: #202020;
+  background-color: $dark-accent;
   padding: .9rem 2rem;
   margin: 1.5rem 0;
   border-radius: 4px;
@@ -825,7 +818,7 @@ p {
 
 .img-card1 img {
   width: 100%;
-  border-radius: 4px;
+  border-radius: 10px;
   z-index: 1;
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   filter: grayscale(100%);
@@ -851,10 +844,10 @@ p {
 
 .detail-card1 {
   width: 50rem;
-  background-color: #202020;
+  background-color: $dark-accent;
   padding: .9rem 2rem;
   margin: -1.5rem 0 1.5rem 0;
-  border-radius: 4px;
+  border-radius: 10px;
   z-index: 100;
 }
 
@@ -991,6 +984,10 @@ p {
   justify-content: space-around;
 }
 
+.title-projects {
+  margin: 3rem 0;
+}
+
 .other-projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
@@ -999,7 +996,7 @@ p {
 }
 
 .project-card {
-  background-color: #202020;
+  background-color: $dark-accent;
   width: 18rem;
   height: 21rem;
   border-radius: 5px;
@@ -1085,6 +1082,43 @@ p {
   .project-card {
     width: 18rem;
   }
+}
+
+
+.image-card {
+  background-color: $dark-accent;
+  width: 18rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1rem;
+}
+
+.project-img {
+  width: 16rem;
+  height: 13rem;
+  border-radius: 10px;
+  object-fit: cover;
+  object-position: 0% 100%;
+}
+
+.project-title {
+  font-size: 1.2rem;
+}
+.project-tech3 {
+  // height: 3rem;
+  display: flex;
+  justify-content: flex-start;
+  gap: 19px;
+  flex-wrap: wrap;
+}
+
+.project-footer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin: .8rem 0;
 }
 
 </style>
